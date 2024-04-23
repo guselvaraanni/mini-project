@@ -1,5 +1,6 @@
 Microblogging 
-![image](https://github.com/guselvaraanni/mini-project/assets/158258133/9375865b-95cc-4c81-a025-eccf03eae961)
+![image](https://github.com/guselvaraanni/mini-project/assets/158258133/033c9a21-a406-4624-ab4a-52b2da62ae3b)
+
 
 ![image](https://github.com/guselvaraanni/mini-project/assets/158258133/00ff3753-456c-413b-9257-cd1d2eb95c75)
 
