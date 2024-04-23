@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Website Clone | CodingNepal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  padding-right:0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #ddd;
+}
+/* Header or Navbar */
+header {
+  width: 100%;
+  background-color: #0f1111;
+}
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #fff;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.nav-logo img {
+  margin-top: 10px;
+  width: 128px;
+}
+.address .deliver {
+  margin-left: 20px;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+.address .map-icon {
+  display: flex;
+  align-items: center;
+}
+.nav-search {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 620px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+}
+.select-search {
+  background: #f3f3f3;
+  width: 50px;
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: none;
+}
+.search-input {
+  max-width: 600px;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+.search-icon {
+  max-width: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background: blue;
+  color: #000;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.sign-in p,
+.returns p {
+  font-size: 0.75rem;
+}
+.sign-in,
+.returns span {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.cart {
+  display: flex;
+}
+.cart .cart-icon {
+  font-size: 2.5rem
+}
+.cart p {
+  margin-top: 20px;
+  font-weight: 500;
+}
+.banner {
+  padding: 10px 20px;
+  background: #222f3d;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.banner-content {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.panel {
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.panel span {
+  margin-right: 7px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+  flex-grow: 1;
+  margin-left: 15px;
+}
+.links a {
+  padding: 10px 0;
+}
+.deals a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+/* Hero Section */
+.hero-section {
+  height: 400px;
+  background-image: url("images/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+}
+/* Shop Section */
+.shop-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  padding: 50px 0;
+}
+.shop-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1280px;
+  width: 100%;
+}
+.shop-link {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.shop-link img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.shop-link h3 {
+  margin-bottom: 10px;
+}
+.shop-link a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: blue;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.shop-link:hover a {
+  color: #c7511f;
+  text-decoration: underline;
+}
+/* Footer */
+.footer-title {
+displaying:flex;
+flex-direction:row;
+ width:100vw;
+ line height:60px;
+ vertical-align:middle;
+  align-items: center;
+  justify-content: center;
+  background-color: #37475a;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  height: 60px;
+}
+.footer-items {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+  background: #232f3e;
+}
+.footer-items h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 20px 0 10px 0;
+}
+.footer-items ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.footer-items li a {
+  color: #ddd;
+  font-size: 0.875rem;
+}
+.footer-items li a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.button{
+background-color:black;
+color:white;
+}
+.center {
+  text-align: center;
+  color: blue;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding-top:30px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom:30px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+.outer{
+padding:10px;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/009/020/053/non_2x/xia-logo-xia-letter-xia-letter-logo-design-initials-xia-logo-linked-with-circle-and-uppercase-monogram-logo-xia-typography-for-technology-business-and-real-estate-brand-vector.jpg" height="143px"></a>
+        </div>
+        <div class="address">
+          <a href="#" class="deliver">Deliver</a>
+          <div class="map-icon">
+            <span class="material-symbols-outlined">location_on</span>
+            <a href="#" class="location">India</a>
+          </div>
+        </div>
+        <div class="nav-search">
+          <select class="select-search">
+            <option>All</option>
+            <option>All Categories</option>
+            <option>Amazon Devices</option>
+          </select>
+          <input type="text" placeholder="Search Xia-Mart" class="search-input">
+          <div class="search-icon">
+            <span class="material-symbols-outlined">search</span>
+          </div>
+        </div>
+        <div class="sign-in">
+         <a href="#"> <p>Hello, sign in</p>
+          <span>Account &amp; Lists</span></a>
+        </div>
+        <div class="returns">
+          <b><a href="#"><p>Returns</p>
+            <span>&amp; Orders</span></a>
+        </div>
+        <div class="cart">
+
+          <a href="#">
+		  
+        <button class="button" onclick="myFunction()">Cart</button>
+            <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+            </a>
+        </div>
+      </nav>
+ 
+<script>
+function myFunction() {
+  alert("Your cart is filled");
+}
+</script> 
+
+  
+      <div class="banner">
+        <div class="banner-content">
+          <div class="panel">
+            <span class="material-symbols-outlined">menu</span>
+            <a href="#">All</a>
+          </div>
+  
+          <ul class="links">
+            <li><a href="#">Today's Deals</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">offered products</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="file:///C:/Users/Win10/Documents/fullstack%20internship/selva5fs.html">Sell</a></li>
+          </ul>
+          <div class="deals">
+            <a href="#">Shop deals in Electronics</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+<div class="row"> 
+  <div class="column">
+    <img src="https://media.gettyimages.com/id/1388873186/photo/discount-70-mockup.jpg?s=612x612&w=gi&k=20&c=5mWtPHtE5VnCqcM2kCx_t-FCg5oBYMF4xM-0hHSJR_k=" style="width:100%">
+    <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/HC-Mobile-2-Offer-060917.jpg" style="width:100%">
+    <img src="https://media.gettyimages.com/id/1388873186/photo/discount-70-mockup.jpg?s=612x612&w=gi&k=20&c=5mWtPHtE5VnCqcM2kCx_t-FCg5oBYMF4xM-0hHSJR_k=" style="width:100%">
+    <img src="https://media.istockphoto.com/id/488182109/photo/chocolates.jpg?s=612x612&w=0&k=20&c=OAzD-G8GZZfzb5bgZ5CJd_PdSIJqdnInLmEeeiDGRe0=" style="width:100%">
+    
+  </div>
+  <div class="column">
+    <img src="https://media.istockphoto.com/id/183780867/photo/groceries.jpg?s=612x612&w=0&k=20&c=nUQiBie_g4kTn0600c-Qu3ZU7mC9YRfG1zkp59Od2JI=" style="width:100%">
+    <img src="https://i.pinimg.com/originals/db/b8/7e/dbb87e2bcf5050fdc71db7ad35816855.jpg" style="height:29%" >
+    <img src="https://img.fruugo.com/product/2/08/708286082_max.jpg" style="width:100%" "height=135%">
+    
+ 
+  </div>  
+ <div class="column">
+    <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2022/07/fruit-salad.jpg?quality=82&strip=all" style="width:100%">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/2023-jewelry-trends-index-1671489767.jpg" style="width:100%">
+    <img src="https://m.media-amazon.com/images/I/81DMg+Qo4FL._AC_UF894,1000_QL80_.jpg" style="height:30%">
+    <img src="https://www.jiomart.com/images/product/original/rvvlkvpvmm/missfox-fancy-braceletblack-women-watches-ladies-wrist-watch-for-girls-style-analog-fashion-female-clock-with-magnet-mash-strap-stylish-girls-watch-new-model-2020-product-images-rvvlkvpvmm-0-202211051305.jpg?im=Resize=(500,630)" style="width:33%">
+    <img src="https://m.media-amazon.com/images/I/6199ZpjY0GL._AC_UF1000,1000_QL80_.jpg" style="width:33%">
+    <img src="https://img.tatacliq.com/images/i8/113Wx168H/MP000000012756344_113Wx168H_202204081928161.jpeg" style="width:30%">
+ 
+  </div>
+  <div class="column">
+    <img src="https://raisinglobal.com/cdn/shop/files/Sale_M_Banner_x800.jpg?v=1693985899" style="width:100%">
+    <img src="https://i.etsystatic.com/19192309/r/il/359064/2857948253/il_570xN.2857948253_k9m2.jpg" style="width:100%">
+   <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-22790,resizemode-75,msid-101921733/top-trending-products/toys-and-games/best-educational-toys-for-kids-in-india-to-kickstart-their-learning-journey.jpg" style="width:100%">
+    
+  </div>
+</div>
+
+
+
+    </header>
+	
+	<br>
+<br> <h1 style= "color:blue;text-align:center" > Used products for Reselling</h1> 
+    <section class="shop-section">
+      <div class="shop-images">
+        <div class="shop-link">
+          <h3>Shop Laptops </h3>
+          <img src="https://www.reliancedigital.in/medias/Lenevo-81WB018YIN-Laptop-492850232-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxMDYyNHxpbWFnZS9qcGVnfGltYWdlcy9oZDQvaDMyLzk4NDkyNDA2MTY5OTAuanBnfDY5MGVmMTZkMWIyNGY2NWRlZmRiMDc4YWY4ZDQ2NTcxNDViZDcyODdlMmMxNWEwYTZiOGU4ZDA2NTJmMjY3Yjc" alt="card" style="">
+          
+		  
+<a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Shop Smartwatches</h3>
+          <img src="https://m.media-amazon.com/images/I/61icsCcbdKL.jpg" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Create with Strip Lights</h3>
+          <img src="https://i.ebayimg.com/images/g/MMQAAOSwJbNiQd2P/s-l1200.webp" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Home Refresh Ideas</h3>
+          <img src="https://i.pinimg.com/originals/f2/d9/0f/f2d90f3174e1a90880049acd83924fe9.png" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+      </div>
+    </section>
+	
+	<section class="shop-section">
+      <div class="shop-images">
+        <div class="shop-link">
+          <h3>Shop your Dresses </h3>
+          <img src="https://images.milledcdn.com/2020-11-19/XVIsyT4HKZUZeqSU/HQKrWVe5_Eg2.gif" alt="card" style="">
+          
+		  
+<a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Shop Appliances</h3>
+          <img src="https://m.economictimes.com/thumb/msid-101766701,width-640,height-480,resizemode-7/up-to-55-on-refrigerators.jpg" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Shop Bags</h3>
+          <img src="https://img.fruugo.com/product/5/16/710394165_max.jpg" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Shop Rings</h3>
+          <img src="https://css.brilliantearth.com/static/img/gateway/engagement-rings/ir338/2023_CYO_Tile_March.jpg" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+      </div>
+	  
+    </section>
+<section class = "outer">	
+	<h2> &nbsp &nbsp Recently Viewed</h2>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="https://www.berrysjewellers.co.uk/cdn/shop/products/1529416245-92135500_grande.png?v=1684851544" alt="Cinque Terre" width="6%" height="400">
+    </a>
+    <div class="desc">Ring - ₹40 with 50% offer</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="https://images-aka.zales.com/lpu/rings_update/zlp_rings_trends_stacking_m.jpg" alt="Forest" width="600px" height="300px">
+    </a>
+    <div class="desc">Bangles - ₹240 with 70% offer</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://m.media-amazon.com/images/I/71VTN8hyoHL._UX679_.jpg" alt="Northern Lights" width="620" height="500">
+    </a>
+    <div class="desc">Plumky pack of 4 Key chain with blue , violet,yellow ,pink <span> - ₹160 with 40% offer</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="https://m.media-amazon.com/images/I/61fpLHPXWwL._UX679_.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Plumky blue Key chain <span> - ₹40 with 40% offer</span></div>
+  </div>
+</div>
+
+</section>
+
+    <footer>
+      
+      <div class="footer-items">
+<a href="#" class="footer-title"><center>Back to top</center>
+
+      </a></div>
+	  <div class="footer-items">
+        <ul>
+          <h3>Get to Know Us</h3>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Release</a></li>
+          <li><a href="#">Xia-Mart Science</a></li>
+        </ul>
+        <ul>
+          <h3>Connect with Us</h3>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <ul>
+          <h3>Make Money with Us</h3>
+          <li><a href="#">Sell on Xia-Mart</a></li>
+          <li><a href="#">Sell under Xia-Mart Accelerator</a></li>
+          <li><a href="#">Protect and Build Your Brand</a></li>
+          <li><a href="#">Xia-Mart Global Selling</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Fulfillment by Xia-Mart</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+          <li><a href="#">Xia-Mart Pay on Merchants</a></li>
+        </ul>
+        <ul>
+          <h3>Let Us Help You</h3>
+          <li><a href="#">COVID-19 and Xia-Mart</a></li>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Return Centre</a></li>
+          <li><a href="#">100% Purchase Protection</a></li>
+          <li><a href="#">Xia-Mart App Download</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </footer>
+	
+</body>
+</html>

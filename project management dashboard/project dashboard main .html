@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:15px;
+  opacity:1;
+background-image:url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+ 
+}
+img{
+ border-radius:50%
+ 
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th {
+  text-align: left;
+  padding: 20px;
+  background-color:#9c9ff0;
+}
+td {
+  text-align: left;
+  padding: 16px;
+  background-color:white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 70%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.button{
+    font-size:20px;
+    color:rgb(99, 111, 180);
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Dashboard</h1>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3>Projects </h3>
+      <p  style= font-size:20px>85/100
+
+     
+      <img src = "https://seeklogo.com/images/T/the-project-logo-6082FFB8D5-seeklogo.com.png" width = "50px" height="50px"  align = "right" paddings = "80px">
+      </p>
+      <p>
+<span style='font-size:15px;color:green;' >&#8599;  10 % increase from Lat month</span> </p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3>Task</h3>
+      <p  style= font-size:20px>100/110
+      <img src = "https://cdn-icons-png.flaticon.com/512/906/906334.png" width = "50px" height="50px"  align = "right" paddings = "80px"></p>
+     
+      <p><span style='font-size:15px;color:red;'>&#8595; 5% decreare from last month </span></p>
+      </div>
+  </div>
+ 
+  <div class="column">
+    <div class="card">
+      <h3>Resources</h3>
+      <p style= font-size:20px >90/85
+      <img src = "https://img.freepik.com/premium-vector/human-resource-vector-concept-logo_579179-1818.jpg?w=2000" width = "50px" height="50px"  align = "right" paddings = "80px"></p>
+      <p><span style='font-size:15px;color:green;'>&#8599; 10 % increase from Lat month</span> </p>
+    </div>
+  </div>
+ 
+  <div class="column">
+    <div class="card">
+      <h3>Time spent</h3>
+      <p  style= font-size:20px>753/835
+      <img src = "https://thumbs.dreamstime.com/b/design-can-be-used-as-logo-icon-as-complement-to-design-work-time-logo-icon-design-128547025.jpg" width = "50px" height="50px"  align = "right" paddings = "80px"></p>
+      <p><span style='font-size:15px;color:red;'>&#8595; 5% decreare from last month </span></p>
+    </div>
+  </div>
+</div>
+</body></main>
+<main>
+
+<pre><h1>Project Details                                                    Overall progress </h1></pre>
+
+<div class="row1">
+  <div class="column1" >
+
+<table>
+  <tr>
+    <th>Project Name</th>
+    <th>Project Manager</th>
+    <th>Due Date</th>
+     <th>Staus</th>
+   
+    <th>Viwe more</th>
+</tr>
+
+  <tr>
+    <td>App Development</td>
+    <td>Smith</td>
+    <td>June 6 , 2023</td>
+    <td>Completed</td>
+   
+    <td><input type = "button" value = "view more" onclick= "window.location.href='switch.html';"></button></td>
+  </tr>
+  <tr>
+    <td>Zero Hunger</td>
+    <td>Jack</td>
+    <td>July 10, 2023</td>
+   
+    <td>Completed</td>
+    <td><input type = "button" value = "view more" onclick= "window.location.href='switch.html';"></button></td>
+  </tr>
+  <tr>
+    <td>Finance management</td>
+    <td>Selva Raanni</td>
+    <td>May 15 , 2023</td>
+    <td>In progress</td>
+
+    <td><input type = "button" value = "view more" onclick= "window.location.href='switch.html';"></button></td>
+  </tr>
+  <tr>
+    <td>Agriculture</td>
+    <td>Ram</td>
+    <td>January 24 , 2024</td>
+    <td>Pending</td>
+ 
+    <td><input type = "button" value = "view more" onclick= "window.location.href='switch.html';"></button></td>
+  </tr>
+  <tr>
+    <td>Full stack</td>
+    <td>Jannu</td>
+    <td>February 13 , 2024</td>
+    <td>In Progress</td>
+
+    <td><input type = "button" value = "view more" onclick= "window.location.href='switch.html';"></button></td>
+  </tr>
+  <tr>
+    <td>Block chain</td>
+    <td>Smith</td>
+    <td>March 10 , 2023</td>
+    <td>Completed</td>
+
+    <td><input type = "button" value = "view more" onclick= "window.location.href='switch.html';"></button></td>
+  </tr>
+
+</table>
+</div>
+
+<div class="column2" >
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['App development', ''],
+  ['App development', 5],
+  ['Zero hunger', 8],
+  ['Finance management', 2],
+  ['Agriculture', 3],
+  ['Full-stack development', 2],
+  ['Block Chaiin', 8]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Projects', 'width':550, 'height':372};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</div>
+</div>
+</main>
+
+</body>
+</html>
